@@ -112,6 +112,8 @@
       <symbol id="i-message" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></symbol>
       <symbol id="i-mobile" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></g></symbol>
       <symbol id="i-receipt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 2h12v20l-3-2-3 2-3-2-3 2V2Zm3 6h6m-6 4h6m-6 4h4"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M7 7l10 10M17 7 7 17"/></symbol>
       <symbol id="i-wave" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 12h2M7 8v8M11 5v14M15 8v8M19 10v4M21 12h0"/></symbol>
     </defs>
   </svg>
@@ -198,72 +200,95 @@
     <!-- ============ VERTICAL AI ============ -->
     <section class="section section--tint" id="vertical" aria-labelledby="vertical-title">
       <div class="container">
-        <span class="eyebrow">Vertical AI</span>
-        <h2 class="thesis" id="vertical-title">Horizontal AI <em>answers.</em> Vertical AI <em>does the job.</em></h2>
+        <div class="vertical-head">
+          <div>
+            <span class="eyebrow">Vertical AI</span>
+            <h2 class="thesis" id="vertical-title">Horizontal AI <em>answers.</em> Vertical AI <em>does the job.</em></h2>
+          </div>
+          <p class="vertical-lead" data-reveal>A general assistant can hold a conversation. A restaurant needs one that knows its tables, its opening hours and when a group is too big to book without the owner. That knowledge (the trade's data model, its rules, its daily workflow) is the product. The AI is how customers reach it.</p>
+        </div>
 
         <div class="vertical-grid">
-          <div class="vertical-copy" data-reveal>
-            <p>A general assistant can hold a conversation. A restaurant needs one that knows table 4 seats five, the kitchen closes at 22:00 and a party of ten needs a call back from the owner.</p>
-            <p>That knowledge (the trade's data model, its rules, its daily workflow) is the product. The AI is the interface to it. So I build one industry at a time, and the whole stack for it.</p>
-
-            <ol class="principles">
-              <li class="principle">
-                <span class="principle-num" aria-hidden="true">01</span>
-                <h3>Own the record, not the minutes</h3>
-                <p>Every answered call writes a real reservation into the business's own book. After a few weeks that book is how the business runs, and that is what keeps a customer, not the voice.</p>
-              </li>
-              <li class="principle">
-                <span class="principle-num" aria-hidden="true">02</span>
-                <h3>Encode the trade's rules in code</h3>
-                <p>Table capacity and floor plans, one calendar per stylist, German fiscal law at the till, GDPR and consent before any call is recorded. Rules live in code and tests, not only in a prompt.</p>
-              </li>
-              <li class="principle">
-                <span class="principle-num" aria-hidden="true">03</span>
-                <h3>Ship the whole stack</h3>
-                <p>Voice agent, telephony, booking engine, web dashboard, iPhone and Android apps, CI and compliance. One person, one codebase, live in production.</p>
-              </li>
-            </ol>
-          </div>
-
-          <figure class="stack" data-reveal aria-labelledby="stack-title">
+          <figure class="panel duel" data-reveal aria-labelledby="duel-title">
             <figcaption>
-              <div class="stack-title" id="stack-title">One trade, the whole stack</div>
-              <div class="stack-sub">What happens when a restaurant misses a call, and who built each layer.</div>
+              <div class="panel-title" id="duel-title">Same call, two answers</div>
+              <div class="panel-sub">Friday, 18:40. The kitchen is full and nobody picks up.</div>
             </figcaption>
-            <ol class="stack-list">
-              <li class="stack-item">
-                <span class="stack-node" aria-hidden="true"><svg><use href="#i-phone"/></svg></span>
-                <span class="stack-text"><strong>The call nobody picks up</strong><span>The carrier forwards missed and busy calls</span></span>
-                <span class="tag">Lucidence</span>
-              </li>
-              <li class="stack-item">
-                <span class="stack-node" aria-hidden="true"><svg><use href="#i-wave"/></svg></span>
-                <span class="stack-text"><strong>Voice agent</strong><span>Answers in the caller's language and uses the booking tools</span></span>
-                <span class="tag">Lucidence</span>
-              </li>
-              <li class="stack-item">
-                <span class="stack-node" aria-hidden="true"><svg><use href="#i-calendar"/></svg></span>
-                <span class="stack-text"><strong>Booking engine</strong><span>Real tables, opening hours, party sizes, stylists</span></span>
-                <span class="tag">Lucidence</span>
-              </li>
-              <li class="stack-item">
-                <span class="stack-node" aria-hidden="true"><svg><use href="#i-message"/></svg></span>
-                <span class="stack-text"><strong>Guest follow-up</strong><span>SMS confirmation, reminder, review request</span></span>
-                <span class="tag">Lucidence</span>
-              </li>
-              <li class="stack-item">
-                <span class="stack-node" aria-hidden="true"><svg><use href="#i-mobile"/></svg></span>
-                <span class="stack-text"><strong>Owner app</strong><span>Bookings, transcripts and callbacks on iPhone, Android and web</span></span>
-                <span class="tag">Lucidence</span>
-              </li>
-              <li class="stack-item stack-item--till">
-                <span class="stack-node" aria-hidden="true"><svg><use href="#i-receipt"/></svg></span>
-                <span class="stack-text"><strong>The till</strong><span>The POS pulls the reservation through our API</span></span>
-                <span class="tag tag--brass">Bonwerk</span>
-              </li>
-            </ol>
+            <p class="bubble bubble--caller"><span class="bubble-who">Caller</span>Hi, do you have a table for five at half past seven tonight?</p>
+            <div class="answers">
+              <div class="answer answer--generic">
+                <span class="answer-label">Horizontal AI</span>
+                <p class="answer-quote">“I can’t see the reservations, but I can take a message for the team.”</p>
+                <p class="answer-outcome"><svg aria-hidden="true"><use href="#i-x"/></svg>A note for the owner to return after service</p>
+              </div>
+              <div class="answer answer--vertical">
+                <span class="answer-label">Vertical AI · Lucidence</span>
+                <p class="answer-quote">“Half past seven for five works. Shall I book it under your name? You’ll get a text to confirm.”</p>
+                <p class="answer-outcome"><svg aria-hidden="true"><use href="#i-check"/></svg>A booking in the book and an SMS to the guest</p>
+              </div>
+            </div>
+            <p class="panel-note">Illustrative example. Lucidence answers in the caller’s language and checks real tables and opening hours before it confirms.</p>
+          </figure>
+
+          <figure class="panel stack" data-reveal aria-labelledby="stack-title">
+            <figcaption>
+              <div class="panel-title" id="stack-title">One trade, the whole stack</div>
+              <div class="panel-sub">Every layer a missed restaurant call touches. I built all of them.</div>
+            </figcaption>
+            <div class="stack-group">
+              <p class="stack-group-label"><span class="tag">Lucidence</span>AI receptionist and booking book</p>
+              <ol class="stack-list">
+                <li class="stack-item">
+                  <span class="stack-node" aria-hidden="true"><svg><use href="#i-phone"/></svg></span>
+                  <span class="stack-text"><strong>The call nobody picks up</strong><span>The carrier forwards missed and busy calls</span></span>
+                </li>
+                <li class="stack-item">
+                  <span class="stack-node" aria-hidden="true"><svg><use href="#i-wave"/></svg></span>
+                  <span class="stack-text"><strong>Voice agent</strong><span>Answers in the caller’s language and uses the booking tools</span></span>
+                </li>
+                <li class="stack-item">
+                  <span class="stack-node" aria-hidden="true"><svg><use href="#i-calendar"/></svg></span>
+                  <span class="stack-text"><strong>Booking engine</strong><span>Real tables, opening hours, party sizes, stylists</span></span>
+                </li>
+                <li class="stack-item">
+                  <span class="stack-node" aria-hidden="true"><svg><use href="#i-message"/></svg></span>
+                  <span class="stack-text"><strong>Guest follow-up</strong><span>SMS confirmation, reminder, review request</span></span>
+                </li>
+                <li class="stack-item">
+                  <span class="stack-node" aria-hidden="true"><svg><use href="#i-mobile"/></svg></span>
+                  <span class="stack-text"><strong>Owner app</strong><span>Bookings, transcripts and callbacks on iPhone, Android and web</span></span>
+                </li>
+              </ol>
+            </div>
+            <div class="stack-group stack-group--till">
+              <p class="stack-group-label"><span class="tag tag--brass">Bonwerk</span>Restaurant till</p>
+              <ol class="stack-list">
+                <li class="stack-item">
+                  <span class="stack-node" aria-hidden="true"><svg><use href="#i-receipt"/></svg></span>
+                  <span class="stack-text"><strong>The till</strong><span>Pulls the reservation through the Lucidence API</span></span>
+                </li>
+              </ol>
+            </div>
           </figure>
         </div>
+
+        <ol class="principles">
+          <li class="principle" data-reveal>
+            <span class="principle-num" aria-hidden="true">01</span>
+            <h3>Own the record, not the minutes</h3>
+            <p>Every answered call writes a real reservation into the business’s own book. That book becomes how the business runs, and it, not the voice, is why a customer stays.</p>
+          </li>
+          <li class="principle" data-reveal>
+            <span class="principle-num" aria-hidden="true">02</span>
+            <h3>Put the trade’s rules in code</h3>
+            <p>Table capacity, one calendar per stylist, German fiscal law at the till, consent before any call is recorded. The rules live in code and tests, not only in a prompt.</p>
+          </li>
+          <li class="principle" data-reveal>
+            <span class="principle-num" aria-hidden="true">03</span>
+            <h3>Build the whole stack</h3>
+            <p>From the phone line to the till: telephony, voice agent, booking engine, apps and compliance. One person, one codebase, in production.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
@@ -272,37 +297,72 @@
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Selected work</span>
-          <h2 id="work-title">Products I've <em>built</em></h2>
-          <p>Two vertical products for the hospitality trade, and the data work that came before them.</p>
+          <h2 id="work-title">Products I’ve <em>built</em></h2>
+          <p>A vertical AI agent and a vertical SaaS product for hospitality, and the machine-learning work at SAP that came before them.</p>
         </div>
 
         <div class="work-grid">
           <article class="card card--feature" data-reveal aria-labelledby="w-lucidence">
-            <div>
+            <div class="feature-main">
               <div class="card-top">
-                <span class="card-kicker">Founder · sole engineer · 2025 – today</span>
+                <span class="card-kicker">Founder · sole engineer · Nov 2025 – today</span>
                 <span class="tag">Live · iPhone &amp; Android</span>
               </div>
               <h3 id="w-lucidence">Lucidence AI</h3>
-              <p class="card-lead">An AI receptionist and booking book for restaurants and salons. When nobody picks up, the call goes to the AI. It books against the business's real tables, opening hours and stylists, in the caller's language, and puts everything into the owner's app.</p>
-              <ul class="card-list">
-                <li>Speaks 85 languages; books, moves and cancels appointments through tool calls into the business's own calendar</li>
-                <li>Restaurant capacity model (tables, floor plan, party size); one calendar per stylist for salons</li>
-                <li>SMS confirmation, reminder and review request; call summaries and callback requests for the owner</li>
-                <li>Platform rules a business can't override, screening of the owner's instructions, card numbers and IBANs redacted, every call checked afterwards</li>
-                <li>Multi-tenant PostgreSQL with automated cross-tenant isolation tests; about 490 server tests plus browser tests on every pull request</li>
-              </ul>
-            </div>
-            <div class="feature-side">
-              <div class="metric-row">
-                <div class="metric"><b>3</b><span>platforms (web, iPhone, Android) from one codebase</span></div>
-                <div class="metric"><b>~490</b><span>automated server tests in CI</span></div>
-                <div class="metric"><b>42</b><span>database tables, every row scoped to one business</span></div>
-                <div class="metric"><b>2</b><span>first design partners live on real calls</span></div>
-              </div>
+              <p class="card-lead">An AI receptionist and booking book for restaurants and salons.</p>
+
+              <dl class="case">
+                <div>
+                  <dt>The problem</dt>
+                  <dd>Owner-run restaurants and salons miss calls during service, and a missed call is often a lost booking. Taking a message doesn’t win it back. Making the booking does.</dd>
+                </div>
+                <div>
+                  <dt>What I built</dt>
+                  <dd>
+                    <ul class="card-list">
+                      <li>A voice agent that answers missed and busy calls around the clock in 85 languages, and books, moves or cancels through tool calls into the business’s own calendar</li>
+                      <li>A booking engine that knows the trade: tables, floor plan and party size for restaurants; one calendar per stylist for salons</li>
+                      <li>Guest follow-up (SMS confirmation, reminder, review request) and an owner app with call summaries and callback requests</li>
+                      <li>Safety and compliance built in: platform rules the business can’t override, screening of owner instructions, card numbers and IBANs redacted, cross-tenant isolation tests on every pull request</li>
+                    </ul>
+                  </dd>
+                </div>
+                <div>
+                  <dt>Where it stands</dt>
+                  <dd>Live with design partners in Heidelberg and Lemgo since October 2026. The owner app is on the App Store and Google Play. First paid subscriptions follow in Q4 2026.</dd>
+                </div>
+              </dl>
+
               <ul class="chips" aria-label="Technology">
                 <li>TypeScript</li><li>React 19</li><li>Express 5</li><li>PostgreSQL</li><li>Drizzle</li><li>Capacitor</li><li>ElevenLabs</li><li>Claude</li><li>Twilio</li><li>Render (Frankfurt)</li>
               </ul>
+            </div>
+
+            <div class="feature-phones">
+              <div class="phones">
+                <figure class="phone phone--back">
+                  <picture>
+                    <source type="image/avif" srcset="assets/img/app-dashboard-464.avif">
+                    <img src="assets/img/app-dashboard-464.jpg" width="464" height="1006" alt="Lucidence owner app home screen for a demo restaurant: today's reservations, guests expected, free tables and the waitlist" loading="lazy" decoding="async">
+                  </picture>
+                </figure>
+                <figure class="phone phone--front">
+                  <picture>
+                    <source type="image/avif" srcset="assets/img/app-call-464.avif">
+                    <img src="assets/img/app-call-464.jpg" width="464" height="1006" alt="Lucidence call log: the AI's German phone conversation with a caller, summarised as a booking for six people tomorrow at 19:30, marked Booked" loading="lazy" decoding="async">
+                  </picture>
+                </figure>
+              </div>
+              <p class="phones-caption">Real screens from the owner app, showing the demo restaurant.</p>
+            </div>
+
+            <div class="feature-facts">
+              <div class="metric-row">
+                <div class="metric"><b>24/7</b><span>answers missed and busy calls</span></div>
+                <div class="metric"><b>3</b><span>platforms (web, iPhone, Android) from one codebase</span></div>
+                <div class="metric"><b>~490</b><span>automated server tests in CI</span></div>
+                <div class="metric"><b>2</b><span>design partners live on real calls</span></div>
+              </div>
               <p class="card-note card-note--tight">Built solo, with Claude Code as my pair programmer.</p>
               <div class="card-links store-links">
                 <a href="https://lucidence.ai/en" rel="noopener">lucidence.ai <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -312,35 +372,35 @@
             </div>
           </article>
 
+          <article class="card" data-reveal aria-labelledby="w-forecast">
+            <div class="card-top">
+              <span class="card-kicker">SAP · Master’s thesis</span>
+              <span class="tag tag--muted">Published on SAP BTP</span>
+            </div>
+            <h3 id="w-forecast">Partner capacity forecasting</h3>
+            <p class="card-lead">My Master’s thesis at SAP: a machine-learning model that forecasts project inflow and consultant demand three years ahead across the SAP SuccessFactors partner ecosystem.</p>
+            <ul class="card-list">
+              <li>Users can override a recommendation without losing the model’s logic</li>
+              <li>Used for workforce planning and to show skill gaps per module</li>
+            </ul>
+            <ul class="chips" aria-label="Technology"><li>Python</li><li>Machine learning</li><li>SAP BTP</li><li>SAP Analytics Cloud</li></ul>
+          </article>
+
           <article class="card" data-reveal aria-labelledby="w-bonwerk">
             <div class="card-top">
               <span class="card-kicker">Vertical SaaS · 2026</span>
               <span class="tag tag--brass">Built · pre-launch</span>
             </div>
             <h3 id="w-bonwerk">Bonwerk POS</h3>
-            <p class="card-lead">An offline-first till for German restaurants that keeps working when the internet doesn't.</p>
+            <p class="card-lead">An offline-first till for German restaurants that keeps working when the internet doesn’t.</p>
             <ul class="card-list">
               <li>One hub, many tablets: waiter, billing, kitchen display and admin as installable web apps</li>
               <li>Built for German fiscal law: TSE signing interface and DSFinV-K tax export</li>
-              <li>Pulls Lucidence reservations through its integration API, so the phone call and the receipt are one system</li>
+              <li>Pulls Lucidence reservations through the integration API, so the phone call and the receipt are one system</li>
               <li>241 automated tests</li>
             </ul>
             <ul class="chips" aria-label="Technology"><li>Node.js</li><li>Express</li><li>SQLite</li><li>PWA</li></ul>
             <p class="card-note">Private repository. Next: a certified TSE and the first installation.</p>
-          </article>
-
-          <article class="card" data-reveal aria-labelledby="w-forecast">
-            <div class="card-top">
-              <span class="card-kicker">SAP SE · thesis project</span>
-              <span class="tag tag--muted">Published on SAP BTP</span>
-            </div>
-            <h3 id="w-forecast">Partner capacity forecasting</h3>
-            <p class="card-lead">A machine-learning model that forecasts project inflow and consultant demand three years ahead across the SAP SuccessFactors partner ecosystem.</p>
-            <ul class="card-list">
-              <li>Users can override a recommendation without losing the model's logic</li>
-              <li>Used for workforce planning and to show skill gaps per module</li>
-            </ul>
-            <ul class="chips" aria-label="Technology"><li>Python</li><li>Machine learning</li><li>SAP BTP</li><li>SAP Analytics Cloud</li></ul>
           </article>
 
           <article class="card" data-reveal aria-labelledby="w-film">
@@ -349,7 +409,7 @@
               <span class="tag tag--muted">Tooling</span>
             </div>
             <h3 id="w-film">A $0 film studio</h3>
-            <p class="card-lead">A video pipeline that runs entirely on my laptop and produced Lucidence's eight marketing films.</p>
+            <p class="card-lead">A video pipeline that runs entirely on my laptop and produced Lucidence’s eight marketing films.</p>
             <ul class="card-list">
               <li>Open-weight video models for footage, Three.js for 3D product scenes</li>
               <li>Real product UI captured with Playwright; ffmpeg for the edit; AI voice-over, music and sound</li>
@@ -373,7 +433,7 @@
             <li><span class="legend-dot legend-dot--done" aria-hidden="true"></span>Done</li>
             <li><span class="legend-dot legend-dot--next" aria-hidden="true"></span>Planned next</li>
           </ul>
-          <p class="support-note">Supported by <strong>CF-OWL</strong>, the Campus Foundry of TH OWL, and by Anthropic's <strong>Claude for Startups</strong> programme.</p>
+          <p class="support-note">Supported by <strong>CF-OWL</strong>, the Campus Foundry of TH OWL; the <strong>Wirtschaftsförderung Lemgo</strong>; and Anthropic's <strong>Claude for Startups</strong> programme.</p>
         </div>
 
         <ol class="timeline">
@@ -420,6 +480,13 @@
             <h3>Accepted into CF-OWL</h3>
             <p>TH OWL's Campus Foundry took Lucidence into its incubator: coaching, workshops and a workspace in Lemgo.</p>
             <span class="tag tag--muted">Support</span>
+          </li>
+          <li class="tl-item tl-item--key" data-reveal>
+            <span class="tl-dot" aria-hidden="true"></span>
+            <time class="tl-date" datetime="2026-05-27">27 May 2026</time>
+            <h3>Wirtschaftsförderung Lemgo opens doors</h3>
+            <p>Tobias Vietz of the Wirtschaftsförderung Lemgo, the city's economic-development office, tested the AI as a difficult caller. He then gave me a list of local businesses to approach in his name and asked to use Lucidence on his own office's phone.</p>
+            <span class="tag">Partners</span>
           </li>
           <li class="tl-item" data-reveal>
             <span class="tl-dot" aria-hidden="true"></span>
@@ -478,8 +545,8 @@
           <li class="tl-item tl-item--next" data-reveal>
             <span class="tl-dot" aria-hidden="true"></span>
             <span class="tl-date">Q4 2026 · planned</span>
-            <h3>A pilot with the City of Lemgo</h3>
-            <p>Working with the city's economic-development office (Wirtschaftsförderung Lemgo): a pilot on the office's own phone line, and a first group of local businesses it has recommended to us.</p>
+            <h3>Pilot with the Wirtschaftsförderung Lemgo</h3>
+            <p>Together with Tobias Vietz: Lucidence on the economic-development office's own phone line, and trials with the local businesses he recommended.</p>
           </li>
           <li class="tl-item tl-item--next" data-reveal>
             <span class="tl-dot" aria-hidden="true"></span>
@@ -603,7 +670,7 @@
                 <li>Founded <b>Lucidence AI UG</b> (registered August 2026) and built the product myself: voice agent, telephony, booking engine, web dashboard and native iPhone and Android apps. <b>First commit to both app stores in seven months.</b></li>
                 <li>Designed the vertical logic that makes it useful to one trade: <b>table-capacity booking</b> for restaurants, <b>one calendar per stylist</b> for salons, SMS confirmations, reminders and review requests, and an integration feed for restaurant tills.</li>
                 <li>Built for German rules from day one: audit logs, consent records, retention and erasure flows, opt-in call recording (§ 201 StGB), and <b>automated cross-tenant isolation tests</b> on every pull request.</li>
-                <li>Run go-to-market: design partners live in Heidelberg and Lemgo, pricing from €99 to €399 a month, German-speaking sales partners, incubation at CF-OWL.</li>
+                <li>Run go-to-market: design partners live in Heidelberg and Lemgo, local introductions through the Wirtschaftsförderung Lemgo, pricing from €99 to €399 a month, German-speaking sales partners, incubation at CF-OWL.</li>
               </ul>
             </div>
           </li>
@@ -617,7 +684,7 @@
             <div class="role-body">
               <p class="role-title">Associate Data Insight &amp; Strategy Analyst</p>
               <ul class="card-list">
-                <li><b>Partner Capacity Forecasting Tool</b> (thesis project, published on SAP BTP): built and deployed an ML model that forecasts project inflow and consultant demand three years ahead across the SuccessFactors partner ecosystem, with user overrides for workforce planning and module-level skill gaps.</li>
+                <li><b>Partner Capacity Forecasting Tool</b> (my Master's thesis, published on SAP BTP): built and deployed an ML model that forecasts project inflow and consultant demand three years ahead across the SuccessFactors partner ecosystem, with user overrides for workforce planning and module-level skill gaps.</li>
                 <li><b>Business Suite Partner Profiling Framework:</b> led the data modelling, KPI alignment and stakeholder work for one source of truth on cross-LOB partner metrics (renewals, consumption, compliance, adoption), with global and regional heads.</li>
                 <li><b>Partner Pipeline Contribution dashboard</b> (Power BI, DAX): compared direct and partner-sourced pipeline by volume and value, and surfaced stalled-pipeline signals and partner behaviour for leadership.</li>
               </ul>
@@ -705,7 +772,7 @@
                 <span class="role-dates">Sep 2022 – Oct 2024</span>
                 <h4>M.Sc. Business Intelligence &amp; Data Analytics</h4>
                 <p>Hochschule Emden/Leer · Grade 1.74 (German scale)</p>
-                <p class="edu-note">Thesis project at SAP: partner capacity forecasting.</p>
+                <p class="edu-note">Master's thesis at SAP: partner capacity forecasting, published on SAP BTP.</p>
               </li>
               <li class="edu" data-reveal>
                 <span class="role-dates">Jul 2018 – Jun 2022</span>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OG card source</title>
+<meta name="robots" content="noindex">
+<style>
+  @font-face { font-family: "Inter"; src: url("../assets/fonts/inter-latin-wght.woff2") format("woff2"); font-weight: 100 900; }
+  @font-face { font-family: "Instrument Serif"; src: url("../assets/fonts/instrument-serif-latin-400-normal.woff2") format("woff2"); }
+  @font-face { font-family: "Instrument Serif"; font-style: italic; src: url("../assets/fonts/instrument-serif-latin-400-italic.woff2") format("woff2"); }
+  html, body { margin: 0; }
+  .card {
+    position: relative;
+    width: 1200px; height: 630px;
+    overflow: hidden;
+    background: #faf8f2;
+    color: #10201a;
+    font-family: "Inter", sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 64px;
+    align-items: center;
+    padding: 0 84px;
+    box-sizing: border-box;
+  }
+  .card::before {
+    content: ""; position: absolute; inset: 0;
+    background-image: repeating-linear-gradient(90deg, rgb(16 32 26 / 0.06) 0 1px, transparent 1px 88px);
+    -webkit-mask-image: radial-gradient(ellipse 80% 80% at 75% 35%, #000 20%, transparent 80%);
+  }
+  .card::after {
+    content: ""; position: absolute; width: 760px; height: 760px; right: -260px; top: -320px; border-radius: 50%;
+    background: radial-gradient(circle, rgb(20 108 67 / 0.16), transparent 62%);
+  }
+  .text, .photo { position: relative; z-index: 1; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 8px 18px 8px 10px; border-radius: 999px;
+    border: 1.5px solid rgb(201 164 92 / 0.6); background: #f4ecda; color: #7f5f22;
+    font-weight: 600; font-size: 22px;
+  }
+  .dot { width: 22px; height: 22px; border-radius: 50%; background: #c9a45c; }
+  h1 { margin: 26px 0 0; font-family: "Instrument Serif", serif; font-weight: 400; font-size: 112px; line-height: 0.92; letter-spacing: -0.02em; }
+  p { margin: 22px 0 0; font-family: "Instrument Serif", serif; font-size: 40px; line-height: 1.12; max-width: 640px; }
+  p em { color: #146c43; }
+  .meta { margin-top: 30px; font-size: 22px; color: #3f4d46; font-weight: 500; }
+  .meta b { color: #146c43; }
+  .photo { width: 360px; height: 450px; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 26px; box-shadow: 0 30px 60px -24px rgb(16 32 26 / 0.35); }
+  .photo::before { content: ""; position: absolute; inset: 20px -20px -20px 20px; border: 1.5px solid rgb(201 164 92 / 0.7); border-radius: 26px; z-index: -1; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="text">
+      <span class="badge"><span class="dot"></span>Vertical AI agent builder</span>
+      <h1>Neeranjan JK</h1>
+      <p>I build <em>vertical AI</em>: agents and software that know one trade inside out.</p>
+      <div class="meta"><b>Founder, Lucidence AI</b> · ex-SAP · Lemgo, Germany</div>
+    </div>
+    <div class="photo"><img src="../assets/img/neeranjan-500.jpg" alt=""></div>
+  </div>
+</body>
+</html>

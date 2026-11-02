@@ -1,0 +1,13 @@
+{
+  "name": "Neeranjan JK — Vertical AI builder",
+  "short_name": "Neeranjan JK",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#faf8f2",
+  "theme_color": "#146c43",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

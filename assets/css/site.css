@@ -1269,7 +1269,46 @@ details.earlier[open] summary::before { content: "\2212"; }
 }
 .contact h2 em { font-style: italic; color: #c9a45c; }
 .contact p { margin-top: 18px; max-width: 40rem; color: rgb(243 241 234 / 0.78); font-size: 1.1rem; }
-.contact .hero-actions { margin-top: 30px; }
+.contact .hero-actions { margin-top: 18px; }
+.contact-methods {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 46rem;
+  margin-top: 30px;
+}
+.contact-methods li {
+  display: grid;
+  gap: 4px;
+  padding: 16px 18px;
+  border-radius: var(--radius-m);
+  border: 1px solid rgb(243 241 234 / 0.16);
+  background: rgb(243 241 234 / 0.04);
+}
+.cm-label {
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c9a45c;
+}
+.cm-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #f3f1ea;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.cm-link:hover { color: #dcbb78; text-decoration: underline; }
+.cm-link svg { width: 16px; height: 16px; flex: none; }
+.cm-note { color: rgb(243 241 234 / 0.66); font-size: 0.88rem; }
+@media (max-width: 640px) {
+  .contact-methods { grid-template-columns: 1fr; }
+}
 .contact .btn--primary { background: #c9a45c; color: #10201a; }
 .contact .btn--primary:hover { background: #dcbb78; color: #10201a; }
 .contact .btn--ghost { background: transparent; color: #f3f1ea; border-color: rgb(243 241 234 / 0.3); }
@@ -1333,7 +1372,8 @@ details.earlier[open] summary::before { content: "\2212"; }
   .section { padding-block: 18pt; break-inside: avoid-page; }
   .card, .stack, .career-chart, .principle, .edu, .mini { box-shadow: none; break-inside: avoid; }
   .contact { background: #fff; color: #000; padding: 0; }
-  .contact p { color: #000; }
+  .contact p, .cm-link, .cm-note { color: #000; }
+  .contact-methods li { border-color: #ccc; background: none; }
   .js [data-reveal] { opacity: 1 !important; transform: none !important; }
   a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #555; word-break: break-all; }
   .card-links a::after, .store-links a::after { content: ""; }
